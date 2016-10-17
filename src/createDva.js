@@ -187,6 +187,9 @@ export default function createDva(createOpts) {
       store.runSaga = sagaMiddleware.run;
       store.asyncReducers = {};
 
+      const extraSagas = plugin.get('extraSagas');
+      extraSagas.forEach(store.runSaga);
+
       // store change
       const listeners = plugin.get('onStateChange');
       for (let listener of listeners) {

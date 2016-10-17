@@ -12,6 +12,7 @@ class Plugin {
       onReducer: [],
       onEffect: [],
       extraReducers: [],
+      extraSagas: [],
     };
   }
 
